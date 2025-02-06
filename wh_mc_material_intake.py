@@ -324,7 +324,7 @@ try :
             days_to_monday = today.weekday()  # Monday is 0, Sunday is 6
             monday = today - timedelta(days=days_to_monday)
 
-            return f"{monday.year}-{monday.month}-{monday.day}"
+            return f"{monday.year}-{str(monday.month).zfill(2)}-{str(monday.day).zfill(2)}"
 
 
         def get_currency(data):
